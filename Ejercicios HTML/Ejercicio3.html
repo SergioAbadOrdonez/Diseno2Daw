@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="author" content="Sergio Abad">
+</head>
+<body>
+    <h1>Encuesta de Satisfacción del Cliente</h1>
+    <form action="#" name="formEjercicio3">
+        <fieldset>
+            <legend>Tu Experiencia General:</legend>
+            <Label>¿Qué tan satisfecho estás con nuestro servicio/producto en general?</Label>
+            <br>
+            <br>
+            <input type="radio" name="opcion" required>Muy Satisfecho
+            <br>
+            <input type="radio" name="opcion">Satisfecho
+            <br>
+            <input type="radio" name="opcion">Neutral
+            <br>
+            <input type="radio" name="opcion">Insatisfecho
+            <br>
+            <input type="radio" name="opcion">Muy Insatisfecho
+            <br>
+            <label for="">Califica nuestro servicio/producto(1-5, donde 5 es excelente)</label>
+            <br>
+            <input type="range" min="1" max="5" step="1" list="tickmarks" required>
+            <datalist id="tickmarks">
+                <option value="1" label="1">1</option>
+                <option value="2" label="2">2</option>
+                <option value="3" label="3">3</option>
+                <option value="4" label="4">4</option>
+                <option value="5" label="5">5</option>
+            </datalist>
+            <br>
+            <br>
+            <label for="">¿Qué aspectos te gustaron más?</label>
+            <br>
+            <input type="checkbox">Interfaz de usuario.
+            <br>
+            <input type="checkbox">Rendimiento/Velocidad.
+            <br>
+            <input type="checkbox">Soporte al cliente.
+            <br>
+            <input type="checkbox">Interfaz de usuario.
+            <br>
+            <input type="checkbox">Interfaz de usuario.
+            <br>
+            <br>
+            <label>Sugerencias para mejorar:</label><br>
+            <textarea rows="5" cols="60" placeholder="Nos encantaria escuchar tus ideas para hacer nuestro servicio/producto aún mejor."></textarea>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Informacion Adicional (Opcional)</legend>
+            <label>Tu Profesion:</label><br>
+            <input type="text" list="hola">
+            <datalist id="hola">
+                <option value="Estudiante">Estudiante</option>
+                <option value="Ingeniero">Ingeniero</option>
+                <option value="Diseñador">Diseñador</option>
+                <option value="Docente">Docente</option>
+                <option value="Empresario">Empresario</option>
+            </datalist>
+            <br>
+            <br>
+            <label>Tu Edad:</label><br>
+            <input type="number" min="18" max="99">
+            <br>
+            <br>
+            <label>Tu Email (si deseas una respuesta):</label><br>
+            <input type="text"><br>
+        </fieldset>
+        <input type="submit" value="Enviar Encuesta">
+        <input type="reset" value="Reiniciar">
+    </form>
+</body>
+</html>
