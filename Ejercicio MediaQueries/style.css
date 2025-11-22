@@ -1,0 +1,151 @@
+:root {
+  --principal: #1976d2;
+  --fondo-header: #f3eeee;
+  --fondo-general: #f5f5f5;
+  --texto: #222;
+  --fuente: "Arial", Helvetica, sans-serif;
+  --espacio: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente);
+  color: var(--texto);
+  background: var(--fondo-general);
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  padding: var(--espacio);
+  background: var(--fondo-header);
+  color: #222;
+
+  h1 {
+    margin: 0;
+    font-size: 26px;
+  }
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--espacio);
+}
+
+.card-container {
+  padding-top: 20px;
+  display: grid;
+  gap: var(--espacio);
+}
+
+.card {
+  display: flex;
+  box-shadow: #121212 1px 1px 8px -2px;
+  flex-direction: column;
+  background: var(--fondo-header);
+  border: 5px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &:not(.featured) {
+    border: 2px solid white;
+  }
+
+  &.featured {
+    border: none;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-content {
+    padding: var(--espacio);
+    width: 100%;
+    flex-grow: 1; 
+    padding-bottom: 40px;
+    .button {
+      background: var(--principal);
+      color: white;
+      text-decoration: none;
+      padding: var(--espacio);
+      border-radius: 6px;
+      &:hover {
+        background-color: #1b63ab;
+      }
+    }
+  }
+}
+
+.card:has(> img) .card-content {
+  background-color: rgba(216, 225, 231, 0.492);
+}
+
+:is(h1, h2) {
+  color: var(--principal);
+}
+
+:where(h1, h2, p) {
+  line-height: 1.4;
+}
+
+@media (min-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo-general: #121212;
+    --texto: #eee;
+    --fondo-header: #222;
+  }
+
+  body {
+    background: var(--fondo-general);
+    color: var(--texto);
+  }
+
+  header {
+    background: var(--fondo-header);
+    color: var(--texto);
+  }
+
+  .card:has(> img) .card-content {
+    background-color: rgba(24, 26, 27, 0.8);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .card:has(img) .card-content {
+    background: #77992dff;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --principal: #fb1500;
+  }
+}
+
+@media (prefers-contrast: less) {
+  :root {
+    --principal: #02f84c;
+  }
+}
+
