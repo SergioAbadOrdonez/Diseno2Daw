@@ -1,5 +1,6 @@
 header {
   display: flex;
+  background-color: var(--color-fondo-header);
   justify-content: center;
   .header-content {
     display: flex;
@@ -11,6 +12,7 @@ header {
     max-width: 1200px;
     h1 {
       flex-grow: 1;
+      margin: var(--margen-general);
     }
   }
 }
@@ -28,20 +30,20 @@ aside {
   }
   ul {
     list-style: none;
-    margin-top: 1rem;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     border: 1px solid var(--color-titulo);
     border-radius: var(--border-radius);
     background-color: var(--color-fondo);
     box-shadow: var(--sombra);
     li {
       padding: 1rem;
+      margin: 0;
       transition: var(--duracion-animacion);
       &:hover {
-        cursor: pointer;
-        scale: 1.02;
+        background-color: var(--color-fondo-header);
+        font-family:'Courier New', Courier, monospace
       }
       a {
         text-decoration: none;
@@ -63,20 +65,34 @@ aside {
     gap: 1rem;
     grid-template-columns: 1fr;
   }
+  @media (width > 900px) {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid var(--color-fondo-footer);
+  color: var(--color-texto);
+  background-color: var(--color-fondo-footer);
 }
 
 @container main-container (width > 500px) {
-  .card-container {
-    grid-template-columns: 1fr 1fr;
+  .page-container .card-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @container main-container (width > 800px) {
-  .card-container {
+  .page-container .card-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (width > 900px) {
-  .page-container {
-    grid-template-columns: 3fr 1fr;
+
+@container aside-container (width <= 200px) {
+  aside ul {
+    text-align: center;
+    margin: 2rem;
   }
 }
