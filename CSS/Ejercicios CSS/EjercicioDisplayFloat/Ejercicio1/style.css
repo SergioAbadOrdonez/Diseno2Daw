@@ -1,0 +1,35 @@
+body {
+    background-color: #0e0819;
+    font-family: "Creepster", system-ui;
+    color: #333; 
+    text-align: center;
+}
+
+h1,h2{
+    color: rgb(156, 33, 33);
+}
+
+.galeria{
+    color: rgb(220, 194, 194);
+    border: 3px dashed yellow;
+}
+.galeria .tarjeta{
+    background-color: #6632c7;
+    border: 2px solid rgb(171, 63, 51);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    align-content: center;
+    border-radius: 10px;
+}
+.block .tarjeta{
+    display: block;
+}
+
+.inline .tarjeta{
+    display: inline;
+}
+
+.inline-block .tarjeta{
+    display: inline-block;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rejillas CSS</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./rejillas1.html">
+                    <img src="./bootstrap-logo.svg" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Bootstrap
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./rejillas1.html">Ejercicio 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./rejillas2.html">Ejercicio 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./rejillas3.html">Ejercicio 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row bg-warning p-3 text-white d-flex justify-content-center mb-3">
+            Header
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-3 col-6 p-3 offset-md-3 text-white bg-info d-flex justify-content-center">
+                1
+            </div>
+            <div class="col-sm-3 col-6 p-3 text-white bg-primary me-md-3 d-flex justify-content-center">
+                2
+            </div>
+            <div class="col-sm-3 col-6 p-3 text-white bg-success d-flex justify-content-center">
+                3
+            </div>
+            <div class="col-sm-3 col-6 p-3 text-white offset-md-6 bg-danger d-flex justify-content-center">
+                4
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 p-3 d-none d-sm-flex d-md-none text-white bg-secondary justify-content-center">
+                Tablet
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-3 col-6 p-3 order-md-4 text-white bg-info d-flex justify-content-center">
+                a
+            </div>
+            <div class="col-sm-3 col-6 p-3 order-md-3 text-white bg-primary d-flex justify-content-center">
+                b
+            </div>
+            <div class="col-sm-3 col-6 p-3 order-md-2 text-white bg-success d-flex justify-content-center">
+                c
+            </div>
+            <div class="col-sm-3 col-6 p-3 order-md-1 text-white bg-danger d-flex justify-content-center">
+                d
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 p-3 d-none d-md-flex text-white bg-secondary justify-content-center">
+                Escritorio
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 p-3 d-flex d-sm-none text-white bg-secondary justify-content-center">
+                Mobile
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 p-3 d-flex text-white bg-warning justify-content-center">
+                Footer
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
